@@ -23,24 +23,24 @@
 [submodule "ocanren08/OCanren"]
 	path = ocanren08/OCanren
 	url = https://github.com/ProgMiner/OCanren.git
-	branch = rt-unify
+	branch = rt-unify+occurs-trivial
 [submodule "ocanren09/OCanren"]
 	path = ocanren09/OCanren
 	url = https://github.com/ProgMiner/OCanren.git
-	branch = path-compression
+	branch = rt-unify+path-compression+occurs-trivial
 [submodule "ocanren10/OCanren"]
 	path = ocanren10/OCanren
 	url = https://github.com/ProgMiner/OCanren.git
-	branch = union-find
+	branch = rt-unify+union-find+occurs-trivial
 [submodule "ocanren11/OCanren"]
 	path = ocanren11/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = no-attr-var
+	branch = rt-unify+no-attr-var+occurs-trivial
 [submodule "ocanren12/OCanren"]
 	path = ocanren12/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = path-compression+no-attr-var
+	branch = rt-unify+path-compression+no-attr-var+occurs-trivial
 [submodule "ocanren13/OCanren"]
 	path = ocanren13/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = union-find+no-attr-var
+	branch = rt-unify+union-find+no-attr-var+occurs-trivial

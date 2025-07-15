@@ -7,14 +7,14 @@ MEASURE=/usr/bin/time -f "%U"
 DUMMY_MEASURE=printf "%10.3f\t" 0.0
 
 MEASURE_RKT   ?=
-MEASURE_OC1   ?= y
+MEASURE_OC1   ?=
 MEASURE_OC2   ?=
 MEASURE_OC3   ?=
 MEASURE_OC4   ?=
 MEASURE_OC5   ?=
 MEASURE_OC6   ?=
 MEASURE_OC7   ?=
-MEASURE_OC8   ?=
+MEASURE_OC8   ?= y
 MEASURE_OC9   ?= y
 MEASURE_OC10  ?= y
 MEASURE_OC11  ?= y
@@ -222,32 +222,32 @@ $(eval $(call DO_PREPARE_OCANREN,MiniKanren07tagless))
 endif
 
 ifneq "$(MEASURE_OC8)" ""
-$(eval $(call ADD_OCANREN,ocanren08,OCanren-rt-unify))
+$(eval $(call ADD_OCANREN,ocanren08,OCanren-rt-unify+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren08))
 endif
 
 ifneq "$(MEASURE_OC9)" ""
-$(eval $(call ADD_OCANREN,ocanren09,OCanren-path-compression))
+$(eval $(call ADD_OCANREN,ocanren09,OCanren-rt-unify+path-compression+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren09))
 endif
 
 ifneq "$(MEASURE_OC10)" ""
-$(eval $(call ADD_OCANREN,ocanren10,OCanren-union-find))
+$(eval $(call ADD_OCANREN,ocanren10,OCanren-rt-unify+union-find+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren10))
 endif
 
 ifneq "$(MEASURE_OC11)" ""
-$(eval $(call ADD_OCANREN,ocanren11,OCanren-no-attr-var))
+$(eval $(call ADD_OCANREN,ocanren11,OCanren-rt-unify+no-attr-var+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren11))
 endif
 
 ifneq "$(MEASURE_OC12)" ""
-$(eval $(call ADD_OCANREN,ocanren12,OCanren-path-compression+no-attr-var))
+$(eval $(call ADD_OCANREN,ocanren12,OCanren-rt-unify+path-compression+no-attr-var+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren12))
 endif
 
 ifneq "$(MEASURE_OC13)" ""
-$(eval $(call ADD_OCANREN,ocanren13,OCanren-union-find+no-attr-var))
+$(eval $(call ADD_OCANREN,ocanren13,OCanren-rt-unify+union-find+no-attr-var+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren13))
 endif
 
