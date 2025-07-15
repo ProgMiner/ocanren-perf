@@ -237,17 +237,17 @@ $(eval $(call DO_PREPARE_OCANREN,ocanren10))
 endif
 
 ifneq "$(MEASURE_OC11)" ""
-$(eval $(call ADD_OCANREN,ocanren11,OCanren-rt-unify+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren11,OCanren-no-attr-var))
 $(eval $(call DO_PREPARE_OCANREN,ocanren11))
 endif
 
 ifneq "$(MEASURE_OC12)" ""
-$(eval $(call ADD_OCANREN,ocanren12,OCanren-rt-unify+path-compression+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren12,OCanren-path-compression+no-attr-var))
 $(eval $(call DO_PREPARE_OCANREN,ocanren12))
 endif
 
 ifneq "$(MEASURE_OC13)" ""
-$(eval $(call ADD_OCANREN,ocanren13,OCanren-rt-unify+union-find+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren13,OCanren-union-find+no-attr-var))
 $(eval $(call DO_PREPARE_OCANREN,ocanren13))
 endif
 

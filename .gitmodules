@@ -35,12 +35,12 @@
 [submodule "ocanren11/OCanren"]
 	path = ocanren11/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = rt-unify+occurs-trivial
+	branch = no-attr-var
 [submodule "ocanren12/OCanren"]
 	path = ocanren12/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = rt-unify+path-compression+occurs-trivial
+	branch = path-compression+no-attr-var
 [submodule "ocanren13/OCanren"]
 	path = ocanren13/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = rt-unify+union-find+occurs-trivial
+	branch = union-find+no-attr-var
