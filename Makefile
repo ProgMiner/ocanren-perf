@@ -14,11 +14,12 @@ MEASURE_OC4   ?=
 MEASURE_OC5   ?=
 MEASURE_OC6   ?=
 MEASURE_OC7   ?=
-MEASURE_OC8   ?= y
-MEASURE_OC9   ?=
+MEASURE_OC8   ?=
+MEASURE_OC9   ?= y
 MEASURE_OC10  ?= y
-MEASURE_OC11  ?=
-MEASURE_OC12  ?=
+MEASURE_OC11  ?= y
+MEASURE_OC12  ?= y
+MEASURE_OC13  ?= y
 MEASURE_SCM   ?=
 MEASURE_MUSCM ?=
 
@@ -226,23 +227,28 @@ $(eval $(call DO_PREPARE_OCANREN,ocanren08))
 endif
 
 ifneq "$(MEASURE_OC9)" ""
-$(eval $(call ADD_OCANREN,ocanren09,OCanren-rt-unify+occurs-simple))
+$(eval $(call ADD_OCANREN,ocanren09,OCanren-path-compression))
 $(eval $(call DO_PREPARE_OCANREN,ocanren09))
 endif
 
 ifneq "$(MEASURE_OC10)" ""
-$(eval $(call ADD_OCANREN,ocanren10,OCanren-rt-unify+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren10,OCanren-union-find))
 $(eval $(call DO_PREPARE_OCANREN,ocanren10))
 endif
 
 ifneq "$(MEASURE_OC11)" ""
-$(eval $(call ADD_OCANREN,ocanren11,OCanren-rt-unify-odd+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren11,OCanren-rt-unify+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren11))
 endif
 
 ifneq "$(MEASURE_OC12)" ""
-$(eval $(call ADD_OCANREN,ocanren12,OCanren-rt-unify-odd+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren12,OCanren-rt-unify+path-compression+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren12))
+endif
+
+ifneq "$(MEASURE_OC13)" ""
+$(eval $(call ADD_OCANREN,ocanren13,OCanren-rt-unify+union-find+occurs-trivial))
+$(eval $(call DO_PREPARE_OCANREN,ocanren13))
 endif
 
 
