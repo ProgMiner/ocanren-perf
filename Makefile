@@ -1,7 +1,8 @@
 print-%: ; @echo $*=$($*)
 
 DATAFILE=data.gnuplot
-TESTS=001 002 005 006 007 011
+# TESTS=001 002 005 006 007 011
+TESTS=001 002
 #TESTS=005 006
 MEASURE=/usr/bin/time -f "%U"
 DUMMY_MEASURE=printf "%10.3f\t" 0.0
@@ -222,32 +223,32 @@ $(eval $(call DO_PREPARE_OCANREN,MiniKanren07tagless))
 endif
 
 ifneq "$(MEASURE_OC8)" ""
-$(eval $(call ADD_OCANREN,ocanren08,OCanren-rt-unify+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren08,OCanren-rt-unify))
 $(eval $(call DO_PREPARE_OCANREN,ocanren08))
 endif
 
 ifneq "$(MEASURE_OC9)" ""
-$(eval $(call ADD_OCANREN,ocanren09,OCanren-less-var))
+$(eval $(call ADD_OCANREN,ocanren09,OCanren-rt-unify+occurs-trivial))
 $(eval $(call DO_PREPARE_OCANREN,ocanren09))
 endif
 
 ifneq "$(MEASURE_OC10)" ""
-$(eval $(call ADD_OCANREN,ocanren10,OCanren-path-compression))
+$(eval $(call ADD_OCANREN,ocanren10,OCanren-rt-unify+occurs-simple))
 $(eval $(call DO_PREPARE_OCANREN,ocanren10))
 endif
 
 ifneq "$(MEASURE_OC11)" ""
-$(eval $(call ADD_OCANREN,ocanren11,OCanren-path-compression+less-var))
+$(eval $(call ADD_OCANREN,ocanren11,OCanren-rt-unify+occurs-full))
 $(eval $(call DO_PREPARE_OCANREN,ocanren11))
 endif
 
 ifneq "$(MEASURE_OC12)" ""
-$(eval $(call ADD_OCANREN,ocanren12,OCanren-rt-unify+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren12,OCanren-rt-unify+occurs-mult))
 $(eval $(call DO_PREPARE_OCANREN,ocanren12))
 endif
 
 ifneq "$(MEASURE_OC13)" ""
-$(eval $(call ADD_OCANREN,ocanren13,OCanren-rt-unify+less-var+occurs-trivial))
+$(eval $(call ADD_OCANREN,ocanren13,OCanren-rt-unify+occurs-sqrt))
 $(eval $(call DO_PREPARE_OCANREN,ocanren13))
 endif
 
