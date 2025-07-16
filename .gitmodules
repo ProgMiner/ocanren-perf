@@ -27,20 +27,20 @@
 [submodule "ocanren09/OCanren"]
 	path = ocanren09/OCanren
 	url = https://github.com/ProgMiner/OCanren.git
-	branch = rt-unify+path-compression+occurs-trivial
+	branch = less-var
 [submodule "ocanren10/OCanren"]
 	path = ocanren10/OCanren
 	url = https://github.com/ProgMiner/OCanren.git
-	branch = rt-unify+union-find+occurs-trivial
+	branch = path-compression
 [submodule "ocanren11/OCanren"]
 	path = ocanren11/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = rt-unify+no-attr-var+occurs-trivial
+	branch = path-compression+less-var
 [submodule "ocanren12/OCanren"]
 	path = ocanren12/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = rt-unify+path-compression+no-attr-var+occurs-trivial
+	branch = rt-unify+occurs-trivial
 [submodule "ocanren13/OCanren"]
 	path = ocanren13/OCanren
 	url = git@github.com:ProgMiner/OCanren
-	branch = rt-unify+union-find+no-attr-var+occurs-trivial
+	branch = rt-unify+less-var+occurs-trivial
