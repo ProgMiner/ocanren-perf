@@ -18,7 +18,7 @@ set yrange [0.01:*]
 plot 'data.gnuplot' using 2:xtic(1) title col ls 2 fillstyle pattern 4 \
       , ''          using 3:xtic(1) title col ls 2 fillstyle pattern 1 \
       , ''          using 4:xtic(1) title col ls 2 fillstyle pattern 7 \
-      # , ''          using 5:xtic(1) title col ls 2 fillstyle pattern 8 \
+      , ''          using 5:xtic(1) title col ls 2 fillstyle pattern 8 \
       # , ''          using 6:xtic(1) title col ls 2 fillstyle pattern 9 \
       # , ''          using 7:xtic(1) title col ls 2 fillstyle pattern 10 \
 
